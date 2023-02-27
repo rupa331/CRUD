@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Employee Record</h1>
+        <a href="/add">Add record</a>
+        <table border="1px" cellpadding="10px">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>State</th>
+                <th>phone</th>
+            </tr> 
+            {% for item in data %}
+            
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.salary}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.state}}</td>
+                <td><a href="/update">Update</td>
+                <td><a href="/delete/{{item.id}}">delete</td>
+                </tr>
+                {% endfor %}
+        <script src="" async defer></script>
+    </body>
+</html>
